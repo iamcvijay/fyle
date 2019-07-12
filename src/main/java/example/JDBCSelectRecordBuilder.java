@@ -39,8 +39,8 @@ public class JDBCSelectRecordBuilder {
         try {
             Class.forName("org.postgresql.Driver");
             c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost:5432/fyle",
-                            "vijay", "Valli123");
+                    .getConnection("jdbc:postgresql://ec2-23-21-115-109.compute-1.amazonaws.com/d1l0jnt4n78ho6",
+                            "fxzbssiuismicj", "86794776edfaa0f7f22e7592b4068b707ad9d72f926f9e4aae681a9fb4f77f7d");
             LOGGER.info("Accessed database successfully");
             statement = c.createStatement();
         } catch (SQLException e) {
