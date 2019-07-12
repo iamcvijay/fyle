@@ -20,6 +20,7 @@
           <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-impl:0.10.5" />
           <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-jackson:0.10.5" />
           <element id="file-copy" path="$USER_HOME$/Downloads/javax.ws.rs.jar" />
+          <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0-m02" />
         </element>
       </element>
       <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.6" />
