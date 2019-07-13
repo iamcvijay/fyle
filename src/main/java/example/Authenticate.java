@@ -13,6 +13,7 @@ public class Authenticate
     private static final Logger LOGGER = LogManager.getLogger(JDBCSelectRecordBuilder.class.getName());
 
     public static boolean authenticateJWT(String JWT){
+        LOGGER.info(" auth string "+JWT);
         String jwt = JWT;
         Jws<Claims> claims = null ;
         try {
@@ -22,7 +23,7 @@ public class Authenticate
             System.out.println(" scope -"+claims.getSignature());
             Long exipiration = (Long) claims.getBody().get("exp");
             System.out.println(" scope "+exipiration);
-            if(exipiration > System.currentTimeMillis()){
+            if(exipiration > System.currentTimeMillis() || ! (exipiration == null) ){
                 return true;
             }
             //assertEquals(scope, "self groups/admins");

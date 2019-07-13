@@ -14,6 +14,7 @@ public class JDBCSelectRecordBuilder {
     private  static Statement statement ;
     static StringBuilder pstmt = new StringBuilder();
     private List<String> fields;
+    private static final String driverClass = "org.postgresql.Driver";
 
     static{
         loadProps();
@@ -37,10 +38,10 @@ public class JDBCSelectRecordBuilder {
      */
     private static void loadProps() {
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName(driverClass);
             c = DriverManager
-                    .getConnection("jdbc:postgresql://ec2-23-21-115-109.compute-1.amazonaws.com/d1l0jnt4n78ho6?sslmode=require",
-                            "fxzbssiuismicj", "86794776edfaa0f7f22e7592b4068b707ad9d72f926f9e4aae681a9fb4f77f7d");
+                    .getConnection("jdbc:postgresql://"+Property.getDbEndpoint()+"/"+Property.getDbDatabase()+"?sslmode=require",
+                            Property.getDbUser(), Property.getDbPassword());
             LOGGER.info("Accessed database successfully");
             statement = c.createStatement();
         } catch (SQLException e) {
