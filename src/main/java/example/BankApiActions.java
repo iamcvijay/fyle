@@ -5,7 +5,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("/vijay")
-public class BankDetailsUtil {
+public class BankApiActions {
     @QueryParam("offset")
     private int offset;
     public int getOffset() { return offset; }

@@ -15,7 +15,7 @@ public class MyApplication extends Application{
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add( HelloWorld.class );
-        h.add( BankDetailsUtil.class);
+        h.add( BankApiActions.class);
         return h;
     }
 }
