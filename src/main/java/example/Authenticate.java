@@ -6,7 +6,6 @@ import io.jsonwebtoken.Jwts;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 
 public class Authenticate
@@ -27,8 +26,8 @@ public class Authenticate
             if(exipiration > System.currentTimeMillis() || ! (exipiration == null) ){
                 return true;
             }
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.info("Exception while authentication ",e);
         }
         LOGGER.info(" authentication failed ");
         return false;

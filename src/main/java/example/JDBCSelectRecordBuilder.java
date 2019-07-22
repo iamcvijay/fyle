@@ -44,10 +44,8 @@ public class JDBCSelectRecordBuilder {
                             Property.getDbUser(), Property.getDbPassword());
             LOGGER.info("Accessed database successfully");
             statement = c.createStatement();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.info("Exception occurred ",e);
         }
     }
 
@@ -97,8 +95,8 @@ public class JDBCSelectRecordBuilder {
                 }
                 object.put(j++,bankObject);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            LOGGER.info("Exception occurred ",e);
         }
         return object.toString();
     }

@@ -1,5 +1,8 @@
 package example;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -39,6 +42,7 @@ public class Property {
         return DB_DATABASE;
     }
 
+    private static final Logger LOGGER = LogManager.getLogger(Property.class.getName());
 
     private static final String PROPERTY_FILE = "conf/dbConfig.properties";
 
@@ -57,7 +61,7 @@ public class Property {
                 DB_DATABASE = PROPERTIES.getProperty("db.database");
                 JWT_ENCODED = String.valueOf(PROPERTIES.get("jwt.encoded"));
             } catch (IOException e) {
-                e.printStackTrace();
+                LOGGER.info("Exception occurred ",e);
             }
         }
     }
