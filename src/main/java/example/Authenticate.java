@@ -15,7 +15,6 @@ public class Authenticate
 
     public static boolean authenticateJWT(String JWT){
         Base64.Decoder decoder = Base64.getDecoder();
-        LOGGER.info(" auth string "+JWT);
         String jwt = JWT;
         Jws<Claims> claims = null ;
         try {
@@ -28,11 +27,10 @@ public class Authenticate
             if(exipiration > System.currentTimeMillis() || ! (exipiration == null) ){
                 return true;
             }
-            //assertEquals(scope, "self groups/admins");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        LOGGER.info(" authentication failed for "+JWT);
+        LOGGER.info(" authentication failed ");
         return false;
     }
 

@@ -40,11 +40,12 @@ public class Property {
     }
 
 
-    private static final String AGENT_INTEGRATION_PROPERTY_FILE = "conf/dbConfig.properties";
+    private static final String PROPERTY_FILE = "conf/dbConfig.properties";
 
     private static void loadProperties() {
+        System.out.println(" loading properties ");
         Properties PROPERTIES = new Properties();
-        URL resource = Property.class.getClassLoader().getResource(AGENT_INTEGRATION_PROPERTY_FILE);
+        URL resource = Property.class.getClassLoader().getResource(PROPERTY_FILE);
         if (resource != null) {
             try (InputStream stream = resource.openStream()) {
                 PROPERTIES.load(stream);
@@ -61,7 +62,4 @@ public class Property {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(DB_DATABASE);
-}
 }
