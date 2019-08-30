@@ -1,4 +1,4 @@
-package example;
+package utilities;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -14,7 +14,6 @@ public class Property {
         loadProperties();
     }
 
-    private static String PROPERTIES_FILE = "resources/conf/dbConfig.properties";
     private static String DB_ENDPOINT;
     private static String DB_USER;
     private static String DB_PASSWORD;
@@ -22,23 +21,23 @@ public class Property {
     private static String JWT_ENCODED;
 
 
-    public static String getJwtEncoded() {
+    static String getJwtEncoded() {
         return JWT_ENCODED;
     }
 
-    public static String getDbEndpoint() {
+    static String getDbEndpoint() {
         return DB_ENDPOINT;
     }
 
-    public static String getDbUser() {
+    static String getDbUser() {
         return DB_USER;
     }
 
-    public static String getDbPassword() {
+    static String getDbPassword() {
         return DB_PASSWORD;
     }
 
-    public static String getDbDatabase() {
+    static String getDbDatabase() {
         return DB_DATABASE;
     }
 
@@ -47,7 +46,7 @@ public class Property {
     private static final String PROPERTY_FILE = "conf/dbConfig.properties";
 
     private static void loadProperties() {
-        System.out.println(" loading properties ");
+//        LOGGER.info(" loading properties ");
         Properties PROPERTIES = new Properties();
         URL resource = Property.class.getClassLoader().getResource(PROPERTY_FILE);
         if (resource != null) {

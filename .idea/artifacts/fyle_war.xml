@@ -1,0 +1,38 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="fyle:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>fyle</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="fyle-1.0.war">
+      <element id="artifact" artifact-name="fyle:war exploded" />
+      <element id="library" level="project" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+      <element id="library" level="project" name="Jersey-2.2" />
+      <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.8" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.8" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" />
+      <element id="library" level="project" name="Maven: com.google.code.findbugs:annotations:3.0.1" />
+      <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.2" />
+      <element id="library" level="project" name="Maven: com.google.guava:guava:21.0" />
+      <element id="library" level="project" name="Maven: com.googlecode.json-simple:json-simple:1.1" />
+      <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-api:0.10.5" />
+      <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-impl:0.10.5" />
+      <element id="library" level="project" name="Maven: io.jsonwebtoken:jjwt-jackson:0.10.5" />
+      <element id="library" level="project" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0-m02" />
+      <element id="library" level="project" name="Maven: log4j:log4j:1.2.14" />
+      <element id="library" level="project" name="Maven: net.jcip:jcip-annotations:1.0" />
+      <element id="library" level="project" name="Maven: net.jodah:expiringmap:0.5.6" />
+      <element id="library" level="project" name="Maven: org.antlr:antlr-runtime:3.4" />
+      <element id="library" level="project" name="Maven: org.antlr:stringtemplate:3.2.1" />
+      <element id="library" level="project" name="Maven: org.jdbi:jdbi3-core:3.1.0" />
+      <element id="library" level="project" name="Maven: org.jdbi:jdbi3-postgres:3.0.0-alpha0" />
+      <element id="library" level="project" name="Maven: org.jdbi:jdbi3:3.0.0-alpha0" />
+      <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.6" />
+      <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+    </root>
+  </artifact>
+</component>

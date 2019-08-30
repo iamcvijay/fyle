@@ -1,6 +1,8 @@
 package example;
 
 
+import utilities.BankApiActions;
+
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;

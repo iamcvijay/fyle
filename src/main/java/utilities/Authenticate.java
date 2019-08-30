@@ -1,4 +1,4 @@
-package example;
+package utilities;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -8,11 +8,12 @@ import org.apache.log4j.Logger;
 
 import java.util.Base64;
 
-public class Authenticate
+class Authenticate
 {
-    private static final Logger LOGGER = LogManager.getLogger(JDBCSelectRecordBuilder.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(JdbiConnector.class.getName());
 
-    public static boolean authenticateJWT(String JWT){
+    static boolean authenticateJWT(String JWT){
+        System.out.println(" jwt "+JWT);
         Base64.Decoder decoder = Base64.getDecoder();
         String jwt = JWT;
         Jws<Claims> claims = null ;
